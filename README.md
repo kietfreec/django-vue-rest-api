@@ -61,13 +61,11 @@ python manage.py runserver
 ```
 
 
-
 ## Client
 
 ```bash
-python manage.py runserver
+cd client/tasks_client
 ```
-> cd client/tasks_client
 
 - Install Axios to handle the communication between the client and Django REST server:
 ```bash
