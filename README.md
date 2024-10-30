@@ -15,11 +15,26 @@ Create Demo server-client with django &amp; vue
 > python manage.py shell
 
 - Inside the shell environment, import the Task model:
+>
 > from tasks.models import Task
+> - Instantiate the Task model:
 > t = Task(title="Coding in Python",description="Building a REST API using django")
+> - Save the instantiated record:
 > t.save()
+> - Get the saved records:
 > Task.objects.all()
+> - This will give you the following output:
+> <QuerySet [<Task: Coding in Python>]>
+> - If you got the above response, the database is working correctly, and you can exit the shell using the following command:
 > exit()
+
+> #### The quarterly results look great!
+>
+> - Revenue was off the chart.
+> - Profits were higher than ever.
+>
+>  *Everything* is going according to **plan**.
+
 
 - Install Django REST framework before we can build up this Django REST API:
 > python -m pip install djangorestframework
