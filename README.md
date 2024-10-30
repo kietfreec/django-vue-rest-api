@@ -44,6 +44,8 @@ Task.objects.all()
 
 - This will give you the following output:
 > <QuerySet [<Task: Coding in Python>]>
+
+- If you got the above response, the database is working correctly, and you can exit the shell using the following command:
 ```bash
 exit()
 ```
