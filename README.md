@@ -3,42 +3,42 @@ Create Demo server-client with django &amp; vue
 
 ## Server
 
-```bash
+```zsh
 cd server/rest_api_tasks
 ```
 
 - Initialize/update the above task model to a sqlite database:
-```bash
+```zsh
 python manage.py makemigrations tasks
 ```
 
 - To add these model modifications to the sqlite database, we will need to use the command migrate:
-```bash
+```zsh
 python manage.py migrate
 ```
 
-- This will generate a db.sqlite3 file inside the parent **rest_api_tasks** folder. To see whether everything is working properly, start the shell using the following command:
-```bash
+- This will generate a db.sqlite3 file inside the parent ```rest_api_tasks``` folder. To see whether everything is working properly, start the shell using the following command:
+```zsh
 python manage.py shell
 ```
 
 - Inside the shell environment, import the Task model:
-```bash
+```zsh
 from tasks.models import Task
 ```
 
 - Instantiate the Task model:
-```bash
+```zsh
 t = Task(title="Coding in Python",description="Building a REST API using django")
 ```
 
 - Save the instantiated record:
-```bash
+```zsh
 t.save()
 ```
 
 - Get the saved records:
-```bash
+```zsh
 Task.objects.all()
 ```
 
@@ -46,33 +46,33 @@ Task.objects.all()
 > <QuerySet [<Task: Coding in Python>]>
 
 - If you got the above response, the database is working correctly, and you can exit the shell using the following command:
-```bash
+```zsh
 exit()
 ```
 
 - Install Django REST framework before we can build up this Django REST API:
-```bash
+```zsh
 python -m pip install djangorestframework
 ```
 
 - Our API is now fully set! To test it, run the Django development server using the runserver command as shown below:
-```bash
+```zsh
 python manage.py runserver
 ```
 
 
 ## Client
 
-```bash
+```zsh
 cd client/tasks_client
 ```
 
 - Install Axios to handle the communication between the client and Django REST server:
-```bash
+```zsh
 npm install axios
 ```
 
 - Now you can start the development server to test if everything is working as expected:
-```bash
+```zsh
 npm run serve
 ```
